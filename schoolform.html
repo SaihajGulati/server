@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>School Form</title>
+  </head>
+  <body>
+    <img src="enrollment.gif" width="350" /><br /><br />
+    This form will be used to:
+    <ol>
+    	<li>Let us know where you're going to school</li>
+    	<li>Let us know your major</li>
+    	<li>Allow us to send you a birthday card from <a href="http://www.bluemountain.com">Blue Mountain</a></li>
+    </ol>
+    <form name="schoolform" method="GET" action="SchoolFormServlet">
+    <!-- form name="schoolform" method="GET" action="SchoolForm.jsp" -->
+      <table>
+        <tr>
+          <td>Email</td>
+          <td><input type="email" name="email" /></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+          <td>Birthday</td>
+          <td><input type="date" name="birthday" /></td>
+        </tr>
+        <tr>
+          <td>New Student?</td>
+          <td>
+            <input type="radio" name="newstudent" value="yes" />Yes
+            <input type="radio" name="newstudent" value="no" />No
+          </td>
+        </tr>
+        <tr>
+          <td>College</td>
+          <td>
+            <input name="college" list="college" />
+            <datalist id="college">
+              <option value="USC" />
+              <option value="UCLA" />
+              <option value="Stanford" />
+              <option value="UC Berkeley" />
+              <option value="Arizona State" />
+              <option value="University of Arizona" />
+              <option value="Oregon State" />
+              <option value="University of Oregon" />
+              <option value="Washington State" />
+              <option value="University of Washington" />
+              <option value="University of Utah" />
+              <option value="University of Colorado" />
+            </datalist>
+          </td>
+        </tr>
+        <tr>
+          <td>Major</td>
+          <td>
+            <select name="major">
+              <option value="CS">Computer Science</option>
+              <option value="CECS">Computer Engineering</option>
+              <option value="CSBA">Computer Science/Business Administration</option>
+              <option value="CSGames">Computer Science-Games</option>
+              <option value="EE">Electrical Engineering</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Favorite Color</td>
+          <td><input type="color" name="favcolor" /></td>
+        </tr>
+        <tr>
+          <td>Terms and Conditions</td>
+          <td>
+            <input type="checkbox" name="agree" value="yes" />I agree.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="reset" name="reset" value="Reset Form" />
+            <input type="submit" name="submit" value="Submit Form" />
+          </td>          
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
